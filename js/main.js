@@ -3875,4 +3875,25 @@ jQuery(document).ready(function($) {
 
 
 
+// popup form button disable 
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all checkboxes inside forms
+    const checkboxes = document.querySelectorAll('.popup-form .terms-checkbox');
+
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener('change', function () {
+        const form = this.closest('form');
+        const submitBtn = form.querySelector('.submit-btn');
+        submitBtn.disabled = !this.checked;
+      });
+
+      // Initialize button disabled (if unchecked on page load)
+      const form = checkbox.closest('form');
+      const submitBtn = form.querySelector('.submit-btn');
+      submitBtn.disabled = !checkbox.checked;
+    });
+  });
+
+
 
