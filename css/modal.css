@@ -1,0 +1,230 @@
+    /* Modal container */
+    .modal {
+      display: none; /* Hide initially */
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      position: relative;
+      width: 56% Im !important;
+      height: 80%;
+      margin: 5% auto;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: -34px;
+      right: 10px;
+      background-color: #fd6f63;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+.join-link, a.download-button{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    background: #2c2e3c;
+    padding: 12px 38px;
+    border-radius: 50px;
+    cursor: pointer;
+    }
+
+    /* download btn start */
+       .download-button {
+      background-color: #2c2e3c;
+      color: white;
+      padding: 7.5px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-left: 10px;
+      text-decoration: none;
+       cursor: pointer;
+    }
+
+    .download-button:hover {
+      background-color: #2c2e3c;
+    }
+    /* download btn end */
+
+    /* discount pop-up start */
+.btn-discount {
+    background-color: #2c2e3c;
+    color: white;
+    font-size: 18px;
+    padding: 7.5px 32px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 50px;
+}
+
+    .btn-discount:hover {
+      background-color: #2c2e3c;
+    }
+
+    /* Popup Styles */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .popup-container {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 889px;
+    text-align: center;
+    position: relative;
+    }
+
+    .popup-container h2 {
+    color: #2c2e3c;
+    font-weight: 500;
+    font-size: 44px;
+    }
+
+    .popup-container p {
+    margin-bottom: 10px;
+    }
+
+    .popup-close-btn {
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+
+    .popup-close-btn:hover {
+      color: black;
+    }
+
+    .popup-form input,
+    .popup-form button {
+      width: 60%;
+      padding: 5px;
+      margin: 5px 0;
+    }
+
+    .popup-form button {
+      background-color: #2c2e3c;
+      color: white;
+      cursor: pointer;
+    }
+
+    .popup-form button:hover {
+      background-color: #2c2e3c;
+    }
+
+    /* Terms and Conditions */
+    .terms {
+      font-size: 0.8em;
+      color: gray;
+    }
+    button.save-60-btn {
+    background: #2c2e3c;
+    color: #fff;
+    font-weight: 600;
+    padding: 7px 20px;
+    border-radius: 50px;
+    margin-top: 16px;
+}
+    /* discount pop-up end */
+
+  .lifetime-btn {
+    background-color: #fd6f63 !important;
+    color: #ffff;
+}
+
+
+
+
+
+
+/* Modal Overlay */
+.custom-pdf-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content */
+.custom-modal-content {
+  background: #fff;
+  width: 70%;
+  height: 80%;
+  margin: 5% auto;
+  position: relative;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Iframe inside modal */
+#customPdfFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Close Button */
+.custom-close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: #fd6f63;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+/* View Button Style */
+.custom-view-btn {
+  display: inline-block;
+  background-color: #2c2e3c;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
