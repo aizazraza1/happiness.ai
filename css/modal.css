@@ -231,3 +231,14 @@
   cursor: pointer;
       line-height: 1.5;
 }
+
+
+
+@media(max-width:767px){
+  .custom-modal-content {
+    width: 90%;
+}
+.custom-close-btn {
+    top: -12px;
+}
+}
