@@ -29,6 +29,8 @@
       <link rel="stylesheet" href="css/modal.css" />
       <link rel="stylesheet" href="css/responsive.css" />
       <link rel="stylesheet" href="demos/application/application.css" />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf_viewer.min.css" />
    </head>
    <body data-mobile-nav-style="classic" class="custom-cursor">
       <!-- start cursor -->
@@ -442,13 +444,19 @@
                                     <ul class="p-0 mb-0 list-style-02 text-start">
                                         <li class="border-bottom border-color-extra-medium-gray sm-ps-25px sm-pe-25px fw-500 text-dark-gray"><img src="./images/cover-picture1.png" style="height: 240px;object-fit: cover;width: 100%;" data-no-retina=""></li>
                                     </ul>
-                                     <div class="d-block bg-gradient-very-light-gray pt-25px pb-25px ps-40px pe-40px sm-ps-25px sm-pe-25px border-radius-8px text-center">
+                                     <!-- <div class="d-block bg-gradient-very-light-gray pt-25px pb-25px ps-40px pe-40px sm-ps-25px sm-pe-25px border-radius-8px text-center"> -->
                                        <!-- Clickable Text -->
                                        <!-- PDF View Button -->
-                                       <span class="custom-view-btn" data-pdf="./PDF-1.pdf">view</span>
+                                       <!-- <span class="custom-view-btn" data-pdf="./PDF-1.pdf">view</span> -->
+                                         <!-- <button class="custom-view-btn" data-pdf="./PDF-1.pdf">view</button> -->
+                                         <!-- <button onclick="openPDF('./PDF-1.pdf')">view</button> -->
                                        <!-- Button to download the PDF -->
-                                       <a class="download-button" href="PDF-1.pdf" download>download PDF</a>
-                                   </div>
+                                       <!-- <a class="download-button" href="PDF-1.pdf" download>download PDF</a> -->
+                                   <!-- </div> -->
+                                   <div class="d-block bg-gradient-very-light-gray pt-25px pb-25px ps-40px pe-40px sm-ps-25px sm-pe-25px border-radius-8px text-center">
+                                    <button onclick="openPDF('./PDF-1.pdf')">View</button>
+                                    <a class="download-button" href="PDF-1.pdf" download>Download PDF</a>
+                                    </div>
                                 </div>
                                 <span class="position-absolute top-25px right-25px bg-white border border-1 border-color-extra-medium-gray box-shadow-large fw-800 text-dark-gray text-uppercase border-radius-3px ps-15px pe-15px fs-12 xs-right-10px xs-top-10px">QUICK DIVE</span>
                             </div>
@@ -2181,7 +2189,7 @@
       <script type="text/javascript" src="js/main.js"></script>
 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
+<!-- <script>
   jQuery(document).ready(function($) {
   $('.custom-view-btn').on('click', function() {
     const pdfUrl = $(this).data('pdf');
@@ -2201,15 +2209,59 @@
     }
   });
 });
-</script>
+</script> -->
 <!-- Global Modal (Reusable for all tabs) -->
-<div class="custom-pdf-modal" id="customPdfModal">
+<!-- <div class="custom-pdf-modal" id="customPdfModal">
   <div class="custom-modal-content">
     <button class="custom-close-btn">Close</button>
-    <!-- <iframe id="customPdfFrame" src="" allowfullscreen></iframe> -->
+    <iframe id="customPdfFrame" src="" allowfullscreen></iframe>
     <div class="pdf-wrapper">
    <iframe id="customPdfFrame" src=""></iframe>
     </div>
+  </div>
+</div> -->
+
+
+
+<!-- PDF.js CDN -->
+<!-- PDF.js Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+  // Worker configuration
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  const modal = document.getElementById("pdf-modal");
+  const canvas = document.getElementById("pdf-canvas");
+  const ctx = canvas.getContext("2d");
+
+  async function openPDF(url) {
+    modal.style.display = "flex"; // Ensure flex display to show modal
+    const loadingTask = pdfjsLib.getDocument(url);
+    const pdf = await loadingTask.promise;
+    const page = await pdf.getPage(1);
+    const viewport = page.getViewport({ scale: 1.5 });
+
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+
+    const renderContext = {
+      canvasContext: ctx,
+      viewport: viewport
+    };
+    await page.render(renderContext).promise;
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+</script>
+
+<!-- Modal Viewer -->
+<div id="pdf-modal" class="pdf-modal" style="display: none;">
+  <div class="pdf-modal-content">
+    <canvas id="pdf-canvas"></canvas>
+    <button onclick="closeModal()" class="close-btn">Close</button>
   </div>
 </div>
    </body>
