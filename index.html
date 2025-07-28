@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
    <head>
@@ -5,15 +6,11 @@
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="author" content="ThemeZaa" />
-      <meta
-         name="viewport"
-         content="width=device-width, initial-scale=1, maximum-scale=1"
-         />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       <meta
          name="description"
          content="We believe happiness is a human right. Everything we do is to make our world happier"
          />
-         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
       <!-- favicon icon -->
       <link rel="shortcut icon" href="images/favicon.svg" />
       <link rel="apple-touch-icon" href="images/favicon.svg" />
@@ -23,6 +20,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <!-- style sheets and font icons  -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="css/vendors.min.css" />
       <link rel="stylesheet" href="css/icon.min.css" />
       <link rel="stylesheet" href="css/style.css" />
@@ -30,7 +28,25 @@
       <link rel="stylesheet" href="css/responsive.css" />
       <link rel="stylesheet" href="demos/application/application.css" />
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf_viewer.min.css" />
+      <style>
+        canvas {
+          width: 100%;
+          height: auto;
+        }
+        button#next-page, button#prev-page {
+            color: #000;
+            border: 1px solid;
+            border-radius: 6px;
+        }
+         button#next-page:active, button#prev-page:active {
+            background-color: #000000;
+            border-color: #000000;
+            color: #fff !important;
+        }
+        .modal-body button + span {
+            color: #000 !important;
+        }
+      </style>
    </head>
    <body data-mobile-nav-style="classic" class="custom-cursor">
       <!-- start cursor -->
@@ -382,7 +398,7 @@
                         <!-- start tab navigation -->
                         <ul class="nav nav-tabs justify-content-center border-0 text-left" data-anime='{ "el": "childs", "translateY": [-30, 0], "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <li class="nav-item mb-30px p-0">
-                                <a data-bs-toggle="tab" href="#tab_four11" class="nav-link active box-shadow-extra-large ps-45px pe-45px pt-35px pb-35px lg-p-5 xs-p-8 border-radius-8px">
+                                <a data-bs-toggle="tab" href="#tab_four11" class="nav-link active box-shadow-extra-large ps-25px pe-25px pt-25px pb-25px lg-p-5 xs-p-8 border-radius-8px">
                                     <div class="flex-column flex-sm-row d-flex align-items-center">
                                         <div class="col-auto align-items-center d-flex me-auto w-250px lg-w-140px xs-w-auto mx-auto xs-mb-20px">
                                             <div class="icon w-30px h-30px d-flex flex-shrink-0 align-items-center justify-content-center fs-11 border border-2 border-radius-100 me-10px">
@@ -392,42 +408,42 @@
                                         </div>
                                         <!-- <div class="offer d-inline-block border border-color-light-medium-gray fw-600 text-dark-gray text-uppercase border-radius-30px ps-20px pe-20px fs-12 lh-26 xs-mb-20px"></div> -->
                                         <div class="col ms-auto text-end mx-auto">
-                                            <h5 class="fw-700 text-dark-gray d-inline-block align-middle mb-0">FREE</h5>
+                                            <h6 class="fw-700 text-dark-gray d-inline-block align-middle mb-0">FREE</h6>
                                             <span class="d-inline-block align-middle ms-10px opacity-7"></span>
                                         </div>
                                     </div>
                                 </a>
                             </li> 
                             <li class="nav-item mb-30px p-0">
-                                <a data-bs-toggle="tab" href="#tab_four12" class="nav-link box-shadow-extra-large ps-45px pe-45px pt-35px pb-35px lg-p-5 xs-p-8 border-radius-8px">
+                                <a data-bs-toggle="tab" href="#tab_four12" class="nav-link box-shadow-extra-large ps-25px pe-25px pt-25px pb-25px lg-p-5 xs-p-8 border-radius-8px">
                                     <div class="flex-column flex-sm-row d-flex align-items-center">
                                         <div class="col-auto align-items-center d-flex me-auto w-250px lg-w-140px xs-w-auto mx-auto xs-mb-20px">
                                             <div class="icon w-30px h-30px d-flex flex-shrink-0 align-items-center justify-content-center fs-11 border border-2 border-radius-100 me-10px">
                                                 <i class="fa-solid fa-check"></i>
                                             </div>
-                                            <div class="fs-20 lg-fs-18 text-dark-gray fw-700 me-15px xs-me-0">deeep dive ebook </div>
+                                            <div class="fs-20 lg-fs-18 text-dark-gray fw-700 me-15px xs-me-0">deep dive ebook </div>
                                         </div>
                                         <div class="offer d-inline-block border border-color-light-medium-gray fw-600 text-dark-gray text-uppercase border-radius-30px ps-20px pe-20px fs-12 lh-26 xs-mb-20px">save 60% </div>
                                         <div class="col ms-auto text-end mx-auto">
-                                            <h5 class="fw-700 text-dark-gray d-inline-block align-middle mb-0">$19.99</h5>
-                                            <span class="d-inline-block align-middle ms-10px opacity-7">per month</span>
+                                            <h6 class="fw-700 text-dark-gray d-inline-block align-middle mb-0" style="text-decoration: line-through;">$19.99</h6>
+                                            <span class="fw-700 d-inline-block align-middle ms-10px opacity-7">$8.99</span>
                                         </div>
                                     </div>
                                 </a>
                             </li> 
                             <li class="nav-item p-0">
-                                <a data-bs-toggle="tab" href="#tab_four13" class="nav-link box-shadow-extra-large ps-45px pe-45px pt-35px pb-35px lg-p-5 xs-p-8 border-radius-8px">
+                                <a data-bs-toggle="tab" href="#tab_four13" class="nav-link box-shadow-extra-large ps-25px pe-25px pt-25px pb-25px lg-p-5 xs-p-8 border-radius-8px">
                                     <div class="flex-column flex-sm-row d-flex align-items-center">
                                         <div class="col-auto align-items-center d-flex me-auto w-250px lg-w-140px xs-w-auto mx-auto xs-mb-20px">
                                             <div class="icon w-30px h-30px d-flex flex-shrink-0 align-items-center justify-content-center fs-11 border border-2 border-radius-100 me-10px">
                                                 <i class="fa-solid fa-check"></i>
                                             </div>
-                                            <div class="fs-20 lg-fs-18 text-dark-gray fw-700 me-15px xs-me-0">deeep dive book</div>
+                                            <div class="fs-20 lg-fs-18 text-dark-gray fw-700 me-15px xs-me-0">deep dive book</div>
                                         </div>
                                         <div class="offer d-inline-block border border-color-light-medium-gray fw-600 text-dark-gray text-uppercase border-radius-30px ps-20px pe-20px fs-12 lh-26 xs-mb-20px">save 50%</div>
                                         <div class="col ms-auto text-end mx-auto">
-                                            <h5 class="fw-700 text-dark-gray d-inline-block align-middle mb-0">$39.99</h5>
-                                            <span class="d-inline-block align-middle ms-10px opacity-7">per month</span>
+                                            <h6 class="fw-700 text-dark-gray d-inline-block align-middle mb-0" style="text-decoration: line-through;">$39.99</h6>
+                                            <span class="fw-700 d-inline-block align-middle ms-10px opacity-7">$19.98</span>
                                         </div>
                                     </div>
                                 </a>
@@ -438,133 +454,66 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="tab-content" data-anime='{ "el": "childs", "translateY": [-30, 0], "perspective": [1200,1200], "scale": [1.05, 1], "rotateX": [5, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <!-- start tab content -->
-                            <div class="tab-pane position-relative fade in active show box-shadow-quadruple-large border-radius-8px pt-40px" id="tab_four11">
+                            <div class="tab-pane position-relative fade in active show box-shadow-quadruple-large border-radius-8px" id="tab_four11">
                                 <!-- <span class="text-dark-gray fw-700 mb-15px fs-24 ls-minus-05px d-inline-block ps-45px pe-45px sm-ps-25px sm-pe-25px">the starter plan</span> -->
                                 <div class="pricing-body overflow-hidden">
                                     <ul class="p-0 mb-0 list-style-02 text-start">
-                                        <li class="border-bottom border-color-extra-medium-gray sm-ps-25px sm-pe-25px fw-500 text-dark-gray"><img src="./images/cover-picture1.png" style="height: 240px;object-fit: cover;width: 100%;" data-no-retina=""></li>
-                                    </ul>
-                                     <!-- <div class="d-block bg-gradient-very-light-gray pt-25px pb-25px ps-40px pe-40px sm-ps-25px sm-pe-25px border-radius-8px text-center"> -->
-                                       <!-- Clickable Text -->
-                                       <!-- PDF View Button -->
-                                       <!-- <span class="custom-view-btn" data-pdf="./PDF-1.pdf">view</span> -->
-                                         <!-- <button class="custom-view-btn" data-pdf="./PDF-1.pdf">view</button> -->
-                                         <!-- <button onclick="openPDF('./PDF-1.pdf')">view</button> -->
-                                       <!-- Button to download the PDF -->
-                                       <!-- <a class="download-button" href="PDF-1.pdf" download>download PDF</a> -->
-                                   <!-- </div> -->
-                                   <div class="d-block bg-gradient-very-light-gray pt-25px pb-25px ps-40px pe-40px sm-ps-25px sm-pe-25px border-radius-8px text-center">
-                                    <button onclick="openPDF('https://ubaidraza.com/wp-content/uploads/2025/07/PDF-1.pdf')">View</button>
-                                    <a class="download-button" href="PDF-1.pdf" download>Download PDF</a>
-                                    </div>
-                                </div>
-                                <span class="position-absolute top-25px right-25px bg-white border border-1 border-color-extra-medium-gray box-shadow-large fw-800 text-dark-gray text-uppercase border-radius-3px ps-15px pe-15px fs-12 xs-right-10px xs-top-10px">QUICK DIVE</span>
-                            </div>
-                            <!-- end tab content -->
-                            <!-- start tab content -->
-                             <div class="tab-pane position-relative fade in  show box-shadow-quadruple-large border-radius-8px pt-40px" id="tab_four12">
-                                <!-- <span class="text-dark-gray fw-700 mb-15px fs-24 ls-minus-05px d-inline-block ps-45px pe-45px sm-ps-25px sm-pe-25px">the starter plan</span> -->
-                                <div class="pricing-body overflow-hidden">
-                                    <ul class="p-0 mb-0 list-style-02 text-start">
-                                        <li class="border-bottom border-color-extra-medium-gray sm-ps-25px sm-pe-25px fw-500 text-dark-gray"><img src="./images/cover-picture2.png" style="height: 240px;object-fit: cover;width: 100%;" data-no-retina=""></li>
+                                        <li class="border-bottom border-color-extra-medium-gray pt-5 sm-ps-25px pb-3 sm-pe-25px fw-500 text-dark-gray"><img src="./images/cover-picture1.png" style="width: 100%;height: 270px;object-fit: cover;" data-no-retina=""></li>
                                     </ul>
                                      <div class="d-block bg-gradient-very-light-gray pt-25px pb-25px ps-40px pe-40px sm-ps-25px sm-pe-25px border-radius-8px text-center">
                                        <!-- Clickable Text -->
                                        <!-- PDF View Button -->
-                                       <span class="custom-view-btn" data-pdf="PDF-2.pdf">preview</span>
+                                       <!--<span class="custom-view-btn fw-600 fs-16" data-pdf="Quick-dive-v0-Part1.pdf">view</span>-->
+                                       <button class="custom-view-btn fw-600 fs-16" data-bs-toggle="modal" data-bs-target="#pdfModal" data-pdf="Quick-dive-v0-Part1.pdf">view</button>
                                        <!-- Button to download the PDF -->
-                                       <!-- <a class="download-button" href="PDF-2.pdf" download>pre-order</a> -->
-                                       <button class="btn-discount">pre-order</button>
-                                       <!-- The Popup -->
-                                       <div class="popup-overlay" id="paymentPopup">
-                                          <div class="popup-container">
-                                             <span class="popup-close-btn" id="closePopup">&times;</span>
-                                             <h4 class="fw-700 text-dark-gray w-80 lg-w-85 mx-auto mt-3 ls-minus-1px">Pre-Order Deep Dive eBook</h4>
-                                             <div class="fs-19 text-dark-gray fw-600 ls-minus-05px mb-2">Hey AI, Make Me Happier</div>
-                                             <div class="fs-20 text-dark-gray fw-600 ls-minus-05px mb-2">Part 1: What is happiness?</div>
-                                             <div class="fs-18 lg-fs-18 text-dark-gray fw-700 me-15px xs-me-0 mb-1" style="text-decoration: line-through;">$19.99</div>
-                                             <div class="fs-20 lg-fs-20 text-dark-gray fw-700 me-15px xs-me-0 mb-1">NOW Only: $8.98</div>
-                                             <!-- <div class="fs-20 lg-fs-20 text-dark-gray fw-700 me-15px xs-me-0">SAVE 60%</div> -->
-                                             <div class="offer d-inline-block border border-color-light-medium-gray fw-600 text-dark-gray text-uppercase border-radius-30px ps-30px pe-30px fs-14 lh-30 xs-mb-20px mt-2">save 60% </div>
-                                             <!-- Pre-order Form -->
-                                             <form class="popup-form w-80 mx-auto mt-4" id="preOrderForm">
-                                                <input type="text" id="firstName" name="firstName" placeholder="First Name" required="" class="ps-2 input-medium bg-transparent  w-100 form-control required mb-3">
-                                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required="" class="ps-2 input-medium bg-transparent  w-100 form-control required mb-3">
-                                                <input type="email" id="email" name="email" placeholder="Email" required="" class="ps-2 input-medium bg-transparent  w-100 form-control required mb-3">
-                                                <input type="text" id="phone" name="phone" placeholder="Phone (Optional)" class="ps-2 input-medium bg-transparent  w-100 form-control required mb-3">
-                                                <div class="checkbox d-flex align-items-center mb-5">
-                                                   <input type="checkbox" id="vehicle1" name="vehicle1" value="terms" class="w-auto me-10px terms-checkbox">
-                                                   <label for="vehicle1"> I agree with the privacy policy and terms and conditions</label>
-                                                </div>
-                                                <button type="submit" class="btn submit-btn btn-large btn-rounded btn-dark-gray btn-box-shadow">pre-order</button>
-                                                 <!-- <button type="submit" class="submit-btn" disabled>Pre-order</button> -->
-                                             </form>
-                                             <p class="terms"><small></small></p>
-                                          </div>
-                                       </div>
+                                       <a class="download-button" href="Quick-dive-v0-Part1.pdf" download>download</a>
                                    </div>
                                 </div>
-                                <span class="position-absolute top-25px right-25px bg-white border border-1 border-color-extra-medium-gray box-shadow-large fw-800 text-dark-gray text-uppercase border-radius-3px ps-15px pe-15px fs-12 xs-right-10px xs-top-10px">DEEP DIVE</span>
+                                <span class="position-absolute top-15px right-25px bg-white border border-1 border-color-extra-medium-gray box-shadow-large fw-800 text-dark-gray text-uppercase border-radius-3px ps-15px pe-15px fs-12 xs-right-10px xs-top-10px">QUICK DIVE</span>
                             </div>
                             <!-- end tab content -->
                             <!-- start tab content -->
-                                <div class="tab-pane position-relative fade in  show box-shadow-quadruple-large border-radius-8px pt-40px" id="tab_four13">
+                             <div class="tab-pane position-relative fade in  show box-shadow-quadruple-large border-radius-8px" id="tab_four12">
                                 <!-- <span class="text-dark-gray fw-700 mb-15px fs-24 ls-minus-05px d-inline-block ps-45px pe-45px sm-ps-25px sm-pe-25px">the starter plan</span> -->
                                 <div class="pricing-body overflow-hidden">
                                     <ul class="p-0 mb-0 list-style-02 text-start">
-                                        <li class="border-bottom border-color-extra-medium-gray sm-ps-25px sm-pe-25px fw-500 text-dark-gray"><img src="./images/cover-picture2.png" style="height: 240px;object-fit: cover;width: 100%;" data-no-retina=""></li>
+                                        <li class="border-bottom border-color-extra-medium-gray sm-ps-25px pt-15 sm-pe-25px fw-500 text-dark-gray"><img src="./images/cover-picture2.png" style="width: 100%;height: 270px;object-fit: cover;" data-no-retina=""></li>
+                                    </ul>
+                                     <div class="d-block bg-gradient-very-light-gray pt-25px pb-25px ps-40px pe-40px sm-ps-25px sm-pe-25px border-radius-8px text-center">
+                                       <!-- Clickable Text -->
+                                       <!-- PDF View Button -->
+                                       <!--<span class="custom-view-btn fw-600 fs-16 me-10px" data-pdf="Deep-dive-v0-Part1-Excerpt.pdf">preview</span>-->
+                                       <button class="custom-view-btn fw-600 fs-16 me-10px" data-bs-toggle="modal" data-bs-target="#pdfModal" data-pdf="Deep-dive-v0-Part1-Excerpt.pdf">preview</button>
+                                       <!-- Button to download the PDF -->
+                                       <!-- <a class="download-button" href="PDF-2.pdf" download>pre-order</a> -->
+                                       <button class="btn-discount fw-600 fs-16">pre-order</button>
+                                       <!-- The Popup -->
+                                       
+                                   </div>
+                                </div>
+                                <span class="position-absolute top-15px right-25px bg-white border border-1 border-color-extra-medium-gray box-shadow-large fw-800 text-dark-gray text-uppercase border-radius-3px ps-15px pe-15px fs-12 xs-right-10px xs-top-10px">DEEP DIVE</span>
+                            </div>
+                            <!-- end tab content -->
+                            <!-- start tab content -->
+                                <div class="tab-pane position-relative fade in  show box-shadow-quadruple-large border-radius-8px" id="tab_four13">
+                                <!-- <span class="text-dark-gray fw-700 mb-15px fs-24 ls-minus-05px d-inline-block ps-45px pe-45px sm-ps-25px sm-pe-25px">the starter plan</span> -->
+                                <div class="pricing-body overflow-hidden">
+                                    <ul class="p-0 mb-0 list-style-02 text-start">
+                                        <li class="border-bottom border-color-extra-medium-gray pt-5 sm-ps-25px sm-pe-25px fw-500 text-dark-gray pb-3"><img src="./images/cover-picture3.png" style="width: 100%;height: 270px;object-fit: cover;" data-no-retina=""></li>
                                     </ul>
                                       <div class="d-block bg-gradient-very-light-gray pt-25px pb-25px ps-40px pe-40px sm-ps-25px sm-pe-25px border-radius-8px text-center">
                                        <!-- Clickable Text -->
                                        <!-- PDF View Button -->
-                                       <span class="custom-view-btn" data-pdf="PDF-2.pdf">preview</span>
+                                       <!--<span class="custom-view-btn fw-600 fs-16 me-10px" data-pdf="Deep-dive-v0-Part1-Excerpt.pdf">preview</span>-->
+                                          <button class="custom-view-btn fw-600 fs-16 me-10px" data-bs-toggle="modal" data-bs-target="#pdfModal" data-pdf="Deep-dive-v0-Part1-Excerpt.pdf">preview</button>
                                        <!-- Button to download the PDF -->
                                        <!-- <a class="download-button" href="PDF-2.pdf" download>pre-order</a> -->
-                                         <button class="save-60-btn btn-discount1">pre-order</button>
+                                         <button class="save-60-btn btn-discount1 fw-600 fs-16">pre-order</button>
                                        <!-- The Modal -->
-                                       <div class="popup-overlay" id="paymentPopup1">
-                                          <div class="popup-container">
-                                             <span class="popup-close-btn" id="closePopup1">&times;</span>
-                                             <h4 class="fw-700 text-dark-gray w-80 lg-w-85 mx-auto mt-3 ls-minus-1px">PRE-Order Deep Dive Printed Book</h4>
-                                             <div class="fs-19 text-dark-gray fw-600 ls-minus-05px mb-2">Hey AI, Make Me Happier</div>
-                                             <div class="fs-20 text-dark-gray fw-600 ls-minus-05px mb-2">Part 1: What is happiness?</div>
-                                             <div class="fs-18 lg-fs-18 text-dark-gray fw-700 me-15px xs-me-0 mb-1" style="text-decoration: line-through;">$39.99</div>
-                                             <div class="fs-20 lg-fs-20 text-dark-gray fw-700 me-15px xs-me-0 mb-1">NOW Only $19.98</div>
-                                             <!-- <div class="fs-20 lg-fs-20 text-dark-gray fw-700 me-15px xs-me-0">SAVE 50%</div> -->
-                                             <div class="offer d-inline-block border border-color-light-medium-gray fw-600 text-dark-gray text-uppercase border-radius-30px ps-30px pe-30px fs-14 lh-30 xs-mb-20px mt-2">save 50% </div>
-                                             <!-- Pre-order Form -->
-                                             <form class="popup-form w-90 mx-auto mt-4" id="preOrderForm1">
-                                                <div class="row align-items-top justify-content-center">
-                                                   <div class="col-sm-6">
-                                                      <input type="text" id="firstName" name="firstName" placeholder="First Name" required="" class="ps-2 input-medium bg-transparent  w-100 form-control required mb-3">
-                                                   </div>
-                                                   <div class="col-sm-6">
-                                                      <input type="text" id="lastName" name="lastName" placeholder="Last Name" required="" class=" ps-2 input-medium bg-transparent  w-100 form-control required mb-3">
-                                                   </div>
-                                                </div>
-                                                <div class="row align-items-top justify-content-center">
-                                                   <div class="col-sm-6"><input type="email" id="email" name="email" placeholder="Email" required="" class="ps-2 input-medium bg-transparent  w-100 form-control required mb-3"></div>
-                                                   <div class="col-sm-6"><input type="text" id="phone" name="phone" placeholder="Phone (Optional)" class="ps-2 input-medium bg-transparent  w-100 form-control mb-3"></div>
-                                                </div>
-                                                <div class="row align-items-top justify-content-center">
-                                                   <div class="col-sm-6"><input type="text" id="address" name="address" placeholder="Address"  class="ps-2 input-medium bg-transparent  w-100 form-control  mb-3"></div>
-                                                   <div class="col-sm-6"><input type="text" id="city" name="city" placeholder="City" class="ps-2 input-medium bg-transparent  w-100 form-control  mb-3"></div>
-                                                </div>
-                                                <div class="row align-items-top justify-content-center">
-                                                   <div class="col-sm-6"> <input type="text" id="country" name="country" placeholder="Country"  class="ps-2 input-medium bg-transparent  w-100 form-control  mb-3"></div>
-                                                   <div class="col-sm-6"><input type="text" id="postalCode" name="postalCode" placeholder="Postal Code"  class="ps-2 input-medium bg-transparent  w-100 form-control  mb-3"></div>
-                                                </div>
-                                                 <div class="checkbox d-flex align-items-center mb-5">
-                                                   <input type="checkbox" id="vehicle2" name="vehicle2" value="terms" class="w-auto me-10px terms-checkbox">
-                                                   <label for="vehicle2"> I agree with the privacy policy and terms and conditions</label>
-                                                </div>
-                                                <button type="submit" class="btn submit-btn btn-large btn-rounded btn-dark-gray btn-box-shadow">pre-order</button>
-                                             </form>
-                                          </div>
-                                       </div>
+                                     
                                    </div>
                                 </div>
-                                <span class="position-absolute top-25px right-25px bg-white border border-1 border-color-extra-medium-gray box-shadow-large fw-800 text-dark-gray text-uppercase border-radius-3px ps-15px pe-15px fs-12 xs-right-10px xs-top-10px">DEEP DIVE</span>
+                                <span class="position-absolute top-15px right-25px bg-white border border-1 border-color-extra-medium-gray box-shadow-large fw-800 text-dark-gray text-uppercase border-radius-3px ps-15px pe-15px fs-12 xs-right-10px xs-top-10px">DEEP DIVE</span>
                             </div>
                             <!-- end tab content --> 
                         </div>
@@ -641,7 +590,8 @@
       </section>
       <!-- end section -->
       <!-- start section -->
-      <section class="pb-0">
+      <section class="pb-0" id="slide-text" style="overflow: hidden;">
+          
          <div class="container">
             <div
                class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mb-6 sm-mb-12"
@@ -758,43 +708,7 @@
                </div>
                <!-- end features box item -->
             </div>
-            <div
-               class="row justify-content-center align-items-center appear anime-complete"
-               data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 250, "easing": "easeOutQuad" }'
-               style=""
-               >
-               <div class="col-12 text-center align-items-center">
-                  <div
-                     class="bg-white border border-1 border-color-extra-medium-gray box-shadow-extra-large fw-800 text-dark-gray text-uppercase border-radius-30px ps-20px pe-20px fs-12 me-10px sm-m-10px d-inline-block align-middle lifetime-btn"
-                     >
-                     LIFETIME OFFER*
-                  </div>
-                  <div
-                     class="text-dark-gray d-block d-sm-inline-block align-middle fs-18 fw-600 ls-minus-05px"
-                     >
-                     <em>and a running prompt</em>
-                     <img
-                        src="images/icon-14-fire.png"
-                        style="max-width: 30px; margin: 0 0px"
-                        />
-                     Get 10.000.000
-                     <img
-                        src="images/icon-15-wheel.png"
-                        style="max-width: 30px; margin: 0 0px"
-                        />
-                     HAPI Crypto Coins every month with a premium
-                     <a
-                        href="/subscribe"
-                        class="fw-800 text-decoration-line-bottom text-dark-gray"
-                        >happiness ai</a 
-                        > account
-                  </div>
-                  <p class="mt-1 sm-w-100 text-dark-gray fw-600 fs-14 mb-5px">
-                  *Terms & Conditions Apply. Offer limited to the first 1K premium users for as long as they
-                   maintain an active premium plan.
-                  </p>
-               </div>
-            </div>
+         
             <!-- <div class="row justify-content-center align-items-center" data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 250, "easing": "easeOutQuad" }'>
                <div class="col-12 text-center align-items-center">
                    <div class="bg-white border border-1 border-color-extra-medium-gray box-shadow-extra-large fw-800 text-dark-gray text-uppercase border-radius-30px ps-20px pe-20px fs-12 me-5px sm-m-10px d-inline-block align-middle">LIFETIME OFFER</div>
@@ -802,7 +716,37 @@
                    <div><p class="lg-w-85 md-w-95 sm-w-100">*Terms & Conditions Apply. Offer limited to the first 1K subscribers for as long as they maintain an active subscripiton.</p></div>
                </div>
                </div> -->
+                     <div class="row justify-content-center align-items-center appear"  data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+               >
+               <div class="col-12 text-center align-items-center transition-inner-all">
+                  <div
+                     class="bg-white border border-1 border-color-extra-medium-gray box-shadow-extra-large fw-800 text-dark-gray text-uppercase border-radius-30px ps-20px pe-20px fs-12 me-5px sm-m-10px d-inline-block align-middle lifetime-btn"
+                     >
+                     LIFETIME OFFER*
+                  </div>
+                  <marquee behavior="scroll" direction="left" class="mt-2">
+                  <div
+                     class="text-dark-gray d-block d-sm-inline-block align-middle fs-18 fw-600 ls-minus-05px ps-20"
+                     >
+                     <img
+                        src="images/icon-14-fire.png"
+                        style="max-width: 20px; margin: 0 0px"
+                        />
+                     Get 1 000 000
+                     <img
+                        src="images/icon-15-wheel.png"
+                        style="max-width: 20px; margin: 0 0px"
+                        />
+                    Crypto Coins every month with a premium happiness ai account.
+                  </div>
+                  </marquee>
+                  <p class="mt-1 sm-w-100 text-dark-gray fw-600 fs-14 mb-5px ps-5 pe-5">
+                  <a href="https://happinessai.com/terms-of-use" class="fw-800 text-decoration-line-bottom text-dark-gray"> *Terms of use</a> apply. Offer limited to the first 10K premium users for as long as they maintain an active premium plan.</p>
+                  <p class="mt-1 sm-w-100 text-dark-gray fw-500 fs-14 mb-5px ps-5 pe-5">HAPI Coin is not an investment. It has no inherent value and offers no guarantee of future financial gain.</p>
+               </div>
+            </div>
          </div>
+      
       </section>
       <!-- end section -->
       <!-- start section -->
@@ -1436,8 +1380,7 @@
                            >purpose</span
                            >
                         <p>
-                           Doing meaningful things brings you eudaimonic wellbeing —
-                           deep, lasting happiness.
+                           Meaningful goals and values give life direction and nurture your eudaimonic wellbeing.
                         </p>
                      </div>
                   </div>
@@ -1758,7 +1701,7 @@
                 <div class="row align-items-center justify-content-center pricing-table-style-07">
                     <div class="col-lg-6 col-md-12 md-mb-30px">
                         <!-- start tab navigation -->
-                        <ul class="nav nav-tabs justify-content-center border-0 text-left" data-anime='{ "el": "childs", "translateY": [-30, 0], "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <ul class="nav nav-tabs justify-content-center border-0 text-left nav-pdf" data-anime='{ "el": "childs", "translateY": [-30, 0], "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <li class="nav-item mb-30px p-0">
                                 <a data-bs-toggle="tab" href="#tab_four1" class="nav-link active box-shadow-extra-large ps-45px pe-45px pt-35px pb-35px lg-p-5 xs-p-8 border-radius-8px">
                                     <div class="flex-column flex-sm-row d-flex align-items-center">
@@ -1816,7 +1759,7 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="tab-content" data-anime='{ "el": "childs", "translateY": [-30, 0], "perspective": [1200,1200], "scale": [1.05, 1], "rotateX": [5, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <!-- start tab content -->
-                            <div class="tab-pane position-relative fade in active show box-shadow-quadruple-large border-radius-8px pt-40px" id="tab_four1">
+                            <div class="tab-pane position-relative fade in active show box-shadow-quadruple-large border-radius-8px" id="tab_four1">
                                 <span class="text-dark-gray fw-700 mb-15px fs-24 ls-minus-05px d-inline-block ps-45px pe-45px sm-ps-25px sm-pe-25px">the starter plan</span>
                                 <div class="pricing-body overflow-hidden">
                                     <ul class="p-0 list-style-02 text-start">
@@ -1833,7 +1776,7 @@
                             </div>
                             <!-- end tab content -->
                             <!-- start tab content -->
-                            <div class="tab-pane position-relative fade in box-shadow-quadruple-large border-radius-8px pt-40px" id="tab_four2">
+                            <div class="tab-pane position-relative fade in box-shadow-quadruple-large border-radius-8px" id="tab_four2">
                                 <span class="text-dark-gray fw-700 mb-15px fs-24 ls-minus-05px d-inline-block ps-45px pe-45px sm-ps-25px sm-pe-25px">the basic plan</span>
                                 <div class="pricing-body overflow-hidden">
                                     <ul class="p-0 list-style-02 text-start">
@@ -1850,7 +1793,7 @@
                             </div>
                             <!-- end tab content -->
                             <!-- start tab content -->
-                            <div class="tab-pane position-relative fade in box-shadow-quadruple-large border-radius-8px pt-40px" id="tab_four3">
+                            <div class="tab-pane position-relative fade in box-shadow-quadruple-large border-radius-8px" id="tab_four3">
                                 <span class="text-dark-gray fw-700 mb-15px fs-24 ls-minus-05px d-inline-block ps-45px pe-45px sm-ps-25px sm-pe-25px">the premium plan</span>
                                 <div class="pricing-body overflow-hidden">
                                     <ul class="p-0 list-style-02 text-start">
@@ -2174,6 +2117,83 @@
             </div>
          </div>
       </footer>
+  <div class="popup-overlay" id="paymentPopup1">
+                                          <div class="popup-container">
+                                             <span class="popup-close-btn" id="closePopup1">&times;</span>
+                                             <h4 class="fw-700 text-dark-gray w-80 lg-w-85 mx-auto mt-3 ls-minus-1px">PRE-Order Deep Dive Printed Book</h4>
+                                               <div class="fs-28 lg-fs-28 text-dark-gray fw-700 ls-minus-05px mb-0">Hey AI, Make Me Happier</div>
+                                             <div class="fs-22 lg-fs-22 text-dark-gray fw-600 ls-minus-05px mb-2">Part 1: What is happiness?</div>
+                                             <div class="fs-30 lg-fs-30 text-dark-gray fw-700 me-15px xs-me-0 mb-1" style="text-decoration: line-through;">$39.99</div>
+                                             <div class="fs-20 lg-fs-20 text-dark-gray fw-700 me-15px xs-me-0 mb-1">Now Only $19.98</div>
+                                             <!-- <div class="fs-20 lg-fs-20 text-dark-gray fw-700 me-15px xs-me-0">SAVE 50%</div> -->
+                                             <div class="offer d-inline-block border border-color-light-medium-gray fw-600 text-dark-gray text-uppercase border-radius-30px ps-30px pe-30px fs-14 lh-30 xs-mb-20px mt-2">save 50% </div>
+                                             <!-- Pre-order Form -->
+                                             <form class="popup-form w-80 mx-auto mt-4" action="preorder2.php" method="POST" id="preOrderForm1">
+                                                <div class="row align-items-top justify-content-center">
+                                                   <div class="col-sm-6">
+                                                      <input type="text" id="firstName" name="firstName" placeholder="First Name" required="" class="ps-5 input-medium bg-transparent  w-100 form-control required mb-3">
+                                                   </div>
+                                                   <div class="col-sm-6">
+                                                      <input type="text" id="lastName" name="lastName" placeholder="Last Name" required="" class=" ps-5 input-medium bg-transparent  w-100 form-control required mb-3">
+                                                   </div>
+                                                </div>
+                                                <div class="row align-items-top justify-content-center">
+                                                   <div class="col-sm-6"><input type="email" id="email" name="email" placeholder="Email" required="" class="ps-5 input-medium bg-transparent  w-100 form-control required mb-3"></div>
+                                                   <div class="col-sm-6"><input type="text" id="phone" name="phone" placeholder="Phone (Optional)" class="ps-5 input-medium bg-transparent  w-100 form-control mb-3"></div>
+                                                </div>
+                                                <div class="row align-items-top justify-content-center">
+                                                   <div class="col-sm-6"><input type="text" id="address" name="address" placeholder="Address"  class="ps-5 input-medium bg-transparent  w-100 form-control  mb-3"></div>
+                                                   <div class="col-sm-6"><input type="text" id="city" name="city" placeholder="City" class="ps-5 input-medium bg-transparent  w-100 form-control  mb-3"></div>
+                                                </div>
+                                                <div class="row align-items-top justify-content-center">
+                                                   <div class="col-sm-6"> <input type="text" id="country" name="country" placeholder="Country"  class="ps-5 input-medium bg-transparent  w-100 form-control  mb-3"></div>
+                                                   <div class="col-sm-6"><input type="text" id="postalCode" name="postalCode" placeholder="Postal Code"  class="ps-5 input-medium bg-transparent  w-100 form-control  mb-3"></div>
+                                                </div>
+                                                 <div class="checkbox d-flex align-items-center mt-3 mb-5">
+                                                   <input type="checkbox" id="terms" name="terms" value="terms" class="w-auto me-10px terms-checkbox">
+                                                  <label for="terms"> I agree with the <a href="./privacy-policy.html" class="fw-800 text-decoration-line-bottom text-dark-gray">privacy policy</a> and <a href="./terms-of-use.html" class="fw-800 text-decoration-line-bottom text-dark-gray">terms-of-use</a></label>
+                                                </div>
+                                                <button type="submit" class="btn submit-btn btn-large btn-rounded btn-black btn-box-shadow">pre-order</button>
+                                             </form>
+                                          </div>
+                                       </div>
+      <div class="popup-overlay" id="paymentPopup">
+                                          <div class="popup-container">
+                                             <span class="popup-close-btn" id="closePopup">&times;</span>
+                                             <h4 class="fw-700 text-dark-gray w-80 lg-w-85 mx-auto mt-3 ls-minus-1px">Pre-Order Deep Dive eBook</h4>
+                                             <div class="fs-28 lg-fs-28 text-dark-gray fw-700 ls-minus-05px mb-0">Hey AI, Make Me Happier</div>
+                                             <div class="fs-22 lg-fs-22 text-dark-gray fw-600 ls-minus-05px mb-2">Part 1: What is happiness?</div>
+                                             <div class="fs-30 lg-fs-30 text-dark-gray fw-700 me-15px xs-me-0 mb-1" style="text-decoration: line-through;">$19.99</div>
+                                             <div class="fs-20 lg-fs-20 text-dark-gray fw-700 me-15px xs-me-0 mb-1">Now Only: $8.98</div>
+                                             <!-- <div class="fs-20 lg-fs-20 text-dark-gray fw-700 me-15px xs-me-0">SAVE 60%</div> -->
+                                             <div class="offer d-inline-block border border-color-light-medium-gray fw-600 text-dark-gray text-uppercase border-radius-30px ps-30px pe-30px fs-14 lh-30 xs-mb-20px mt-2">save 60% </div>
+                                             <!-- Pre-order Form -->
+                                             <form class="popup-form w-80 mx-auto mt-4" action="preorder.php" method="POST" id="preOrderForm">
+                                               <div class="row align-items-top justify-content-center">
+                                                <div class="col-sm-6">   
+                                                <input type="text" id="firstName" name="firstName" placeholder="First Name" required="" class="ps-5 input-medium bg-transparent  w-100 form-control required mb-3">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required="" class="ps-5 input-medium bg-transparent  w-100 form-control required mb-3">
+                                                </div>
+                                                </div>
+                                                <div class="row align-items-top justify-content-center">
+                                                 <div class="col-sm-6">   
+                                                <input type="email" id="email" name="email" placeholder="Email" required="" class="ps-5 input-medium bg-transparent  w-100 form-control required mb-3">
+                                                </div>
+                                                <div class="col-sm-6">  
+                                                <input type="text" id="phone" name="phone" placeholder="Phone (Optional)" class="ps-5 input-medium bg-transparent  w-100 form-control required mb-3">
+                                                </div>
+                                                </div>
+                                                <div class="checkbox d-flex align-items-center mt-3 mb-5">
+                                                   <input type="checkbox" id="term-privacy" name="terms" value="terms" class="w-auto me-10px terms-checkbox">
+                                                   <label for="terms"> I agree with the <a href="./privacy-policy.html" class="fw-800 text-decoration-line-bottom text-dark-gray">privacy policy</a> and <a href="./terms-of-use.html" class="fw-800 text-decoration-line-bottom text-dark-gray"> terms of use</a></label>
+                                                </div>
+                                                <button type="submit" class="btn submit-btn btn-large btn-rounded btn-black btn-box-shadow">pre-order</button>
+                                             </form>
+                                             <p class="terms"><small></small></p>
+                                          </div>
+                                       </div>
       <!-- end footer -->
       <!-- start scroll progress -->
       <div class="scroll-progress d-none d-xxl-block">
@@ -2182,87 +2202,122 @@
             ><span class="scroll-line"><span class="scroll-point"></span></span>
          </a>
       </div>
+      
+      
+      <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pdfModalLabel">Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+             <div class="d-flex justify-content-between align-items-center mb-2 px-3">
+            <button id="prev-page" class="btn btn-outline-secondary btn-sm">⏮ Prev</button>
+            <span>Page: <span id="page-num">1</span> / <span id="page-count">--</span></span>
+            <button id="next-page" class="btn btn-outline-secondary btn-sm">Next ⏭</button>
+          </div>
+          <canvas id="pdf-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+      <!-- Global Modal (Reusable for all tabs) -->
+<!--<div class="custom-pdf-modal" id="customPdfModal">-->
+<!--  <div class="custom-modal-content">-->
+<!--    <button class="custom-close-btn">Close</button>-->
+<!--    <iframe id="customPdfFrame" src=""></iframe>-->
+<!--  </div>-->
+<!--</div>-->
       <!-- end scroll progress -->
       <!-- javascript libraries -->
       <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/vendors.min.js"></script>
+    <!-- PDF.js & Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
-
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- <script>
-  jQuery(document).ready(function($) {
-  $('.custom-view-btn').on('click', function() {
-    const pdfUrl = $(this).data('pdf');
-    $('#customPdfFrame').attr('src', pdfUrl);
-    $('#customPdfModal').fadeIn();
-  });
-
-  $('.custom-close-btn').on('click', function() {
-    $('#customPdfModal').fadeOut();
-    $('#customPdfFrame').attr('src', '');
-  });
-
-  $('#customPdfModal').on('click', function(e) {
-    if ($(e.target).is('#customPdfModal')) {
-      $('#customPdfModal').fadeOut();
-      $('#customPdfFrame').attr('src', '');
-    }
-  });
-});
-</script> -->
-<!-- Global Modal (Reusable for all tabs) -->
-<!-- <div class="custom-pdf-modal" id="customPdfModal">
-  <div class="custom-modal-content">
-    <button class="custom-close-btn">Close</button>
-    <iframe id="customPdfFrame" src="" allowfullscreen></iframe>
-    <div class="pdf-wrapper">
-   <iframe id="customPdfFrame" src=""></iframe>
-    </div>
-  </div>
-</div> -->
-
-
-
-<!-- PDF.js CDN -->
-<!-- PDF.js Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+      
+<script src="https://js.stripe.com/v3/"></script>
 <script>
-  // Worker configuration
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-  const modal = document.getElementById("pdf-modal");
-  const canvas = document.getElementById("pdf-canvas");
-  const ctx = canvas.getContext("2d");
+  let pdfDoc = null,
+      pageNum = 1,
+      pageRendering = false,
+      pageNumPending = null,
+      scale = 1.5,
+      canvas = document.getElementById('pdf-canvas'),
+      ctx = canvas.getContext('2d');
 
-  async function openPDF(url) {
-    modal.style.display = "flex"; // Ensure flex display to show modal
-    const loadingTask = pdfjsLib.getDocument(url);
-    const pdf = await loadingTask.promise;
-    const page = await pdf.getPage(1);
-    const viewport = page.getViewport({ scale: 1.5 });
+  const pageNumEl = document.getElementById('page-num');
+  const pageCountEl = document.getElementById('page-count');
 
-    canvas.width = viewport.width;
-    canvas.height = viewport.height;
+  function renderPage(num) {
+    pageRendering = true;
 
-    const renderContext = {
-      canvasContext: ctx,
-      viewport: viewport
-    };
-    await page.render(renderContext).promise;
+    pdfDoc.getPage(num).then(page => {
+      const viewport = page.getViewport({ scale });
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      const renderContext = {
+        canvasContext: ctx,
+        viewport: viewport
+      };
+      const renderTask = page.render(renderContext);
+
+      renderTask.promise.then(() => {
+        pageRendering = false;
+        if (pageNumPending !== null) {
+          renderPage(pageNumPending);
+          pageNumPending = null;
+        }
+      });
+
+      pageNumEl.textContent = num;
+    });
   }
 
-  function closeModal() {
-    modal.style.display = "none";
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  function queueRenderPage(num) {
+    if (pageRendering) {
+      pageNumPending = num;
+    } else {
+      renderPage(num);
+    }
   }
-</script>
 
-<!-- Modal Viewer -->
-<div id="pdf-modal" class="pdf-modal" style="display: none;">
-  <div class="pdf-modal-content">
-    <canvas id="pdf-canvas"></canvas>
-    <button onclick="closeModal()" class="close-btn">Close</button>
-  </div>
-</div>
+  function onPrevPage() {
+    if (pageNum <= 1) return;
+    pageNum--;
+    queueRenderPage(pageNum);
+  }
+
+  function onNextPage() {
+    if (pageNum >= pdfDoc.numPages) return;
+    pageNum++;
+    queueRenderPage(pageNum);
+  }
+
+  document.getElementById('prev-page').addEventListener('click', onPrevPage);
+  document.getElementById('next-page').addEventListener('click', onNextPage);
+
+  // Handle modal open with PDF loading
+  document.getElementById('pdfModal').addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    const pdfUrl = button.getAttribute('data-pdf');
+
+    pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+      pdfDoc = pdf;
+      pageCountEl.textContent = pdf.numPages;
+      pageNum = 1;
+      renderPage(pageNum);
+    }).catch(err => {
+      console.error('Error loading PDF:', err.message);
+    });
+  });
+  </script>
+
    </body>
 </html>
